@@ -1,0 +1,303 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <h3> I am kaviyavikashini</h3>
+            <p>I'm a student of velalar  of engineering and technology passionate with web developer with a passion for creating beautiful and functional websites.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Presentation</h3> 
+                <p>Maximizing solar power generation efficiency</p>
+            </div>
+            <h2>Workshop</h2>
+            <div class="project">
+                <p>Attended workshop on"ARTIFICAL INTELLIGENCE IN DIGITAL ERA" at KPR college<p>
+            </div>
+            <div>
+                <h2>Area of interest</h2>
+                <p> Database management System</p>
+                <p>fullstack web development</p>
+            </div>
+            <div>
+                <h1>Academic</h1>
+    <table>
+        <thead>
+    </style>
+</head>
+<body>
+            <tr>
+                <th>Degree</th>
+                <th>Specification</th>
+                <th>year of passing</th>
+                <th>percentage</th>
+                <th>Institution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>B.tech</td>
+                <td>Information Technology</td>
+                <td>2026</td>
+                <td>7.5</td>
+                <td>VCET</td>
+            </tr>
+            <tr>
+                <td>XII-STD</td>
+                <td>HSC</td>
+                <td>2022</td>
+                <td>71%</td>
+                <td>Navarasam Matric.HR.Sec.School</td>
+            </tr>
+            <tr>
+                <td>X-STD</td>
+                <td>sslc</td>
+                <td>2020</td><td>
+                    93%
+                </td>
+                <td>navarasam Matric.HR.Sec.School</td>
+            </tr>
+        </tbody>
+    </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="submit.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
+
+CSS
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px 0;
+}
+
+#about, #skills, #projects, #contact {
+    background-color: rgb(231, 230, 238);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills ul li {
+    display: inline;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.project {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+javascript
+document.addEventListener('DOMContentLoaded', () => {
+    const postButton = document.getElementById('post-button');
+    const postContent = document.getElementById('post-content');
+    const postList = document.getElementById('post-list');
+
+    const addFollowerButton = document.getElementById('add-follower-button');
+    const followerName = document.getElementById('follower-name');
+    const followerList = document.getElementById('follower-list');
+
+    // Load posts and followers from localStorage
+    loadPosts();
+    loadFollowers();
+
+    postButton.addEventListener('click', () => {
+        const content = postContent.value.trim();
+        if (content) {
+            savePost(content);
+            postContent.value = ''; // Clear the textarea
+            loadPosts(); // Reload the posts
+        }
+    });
+
+    addFollowerButton.addEventListener('click', () => {
+        const name = followerName.value.trim();
+        if (name) {
+            saveFollower(name);
+            followerName.value = ''; // Clear the input
+            loadFollowers(); // Reload the followers
+        }
+    });
+
+    function savePost(content) {
+        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+        posts.push({ content });
+        localStorage.setItem('posts', JSON.stringify(posts));
+    }
+
+    function loadPosts() {
+        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+        postList.innerHTML = '';
+        posts.forEach(post => {
+            const postItem = document.createElement('div');
+            postItem.className = 'post-item';
+            postItem.textContent = post.content;
+            postList.appendChild(postItem);
+        });
+    }
+
+    function saveFollower(name) {
+        const followers = JSON.parse(localStorage.getItem('followers')) || [];
+        followers.push({ name });
+        localStorage.setItem('followers', JSON.stringify(followers));
+    }
+
+    function loadFollowers() {
+        const followers = JSON.parse(localStorage.getItem('followers')) || [];
+        followerList.innerHTML = '';
+        followers.forEach(follower => {
+            const followerItem = document.createElement('li');
+            followerItem.className = 'follower-item';
+            followerItem.textContent = follower.name;
+            followerList.appendChild(followerItem);
+        });
+    }
+});
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit</title>
+</head>
+<body>
+    <h1>Thanks For Your Response</h1>
+</body>
+</html>
